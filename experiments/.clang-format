@@ -30,7 +30,7 @@ AllowAllParametersOfDeclarationOnNextLine: true
 BreakBeforeBraces: Custom
 BraceWrapping:
     AfterStruct: true
-    #BeforeLambdaBody: true # not supported
+    BeforeLambdaBody: true
 BreakBeforeTernaryOperators: true
 FixNamespaceComments: true
 KeepEmptyLinesAtTheStartOfBlocks: false
