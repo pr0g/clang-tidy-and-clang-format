@@ -6,6 +6,27 @@
 
 - Clone llvm/clang and build `clang-tidy` + `clang-format`
 
+#### Latest
+
+```bash
+cd ${SRC_ROOT} # root folder for llvm repo
+git clone --depth 1 https://github.com/llvm/llvm-project .
+mkdir build
+cmake -S llvm/ -B build\ -G "Visual Studio 16 2019" ^
+  -DCMAKE_GENERATOR_PLATFORM=x64 ^
+  -Thost=x64 ^
+  -DLLVM_INCLUDE_TESTS=OFF ^
+  -DLLVM_BUILD_TOOLS=OFF ^
+  -DLLVM_INCLUDE_UTILS=OFF ^
+  -DLLVM_TARGETS_TO_BUILD="" ^
+  -DCLANG_ENABLE_STATIC_ANALYZER=OFF ^
+  -DCLANG_ENABLE_ARCMT=OFF
+  -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra"
+cmake --build build\ --config Release -j4
+```
+
+#### Deprecated
+
 ```bash
 # source - https://devblogs.microsoft.com/cppblog/exploring-clang-tooling-part-1-extending-clang-tidy/
 cd ${SRC_ROOT}
