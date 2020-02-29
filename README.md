@@ -52,7 +52,7 @@ cmake --build build/ --target clang-format --config Release
 
 ### Setup
 
-- Ensure `clang-format.exe` and `clang-tidy.exe` are added to your path (restart your command prompt after making this change if necessary). These can either have been built locally (see [Optional](##Optional) section), downloaded from the [Release](https://github.com/pr0g/clang-tidy-and-clang-format/releases/tag/initial) page or obtained from another source.
+- Ensure `clang-format.exe` and `clang-tidy.exe` are added to your path (restart your command prompt after making this change if necessary). These can either have been built locally (see [Optional](##Optional) section), downloaded from the [Release](https://github.com/pr0g/clang-tidy-and-clang-format/releases/tag/latestl) page or obtained from another source.
 
 ### Usage
 
