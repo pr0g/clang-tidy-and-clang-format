@@ -25,9 +25,13 @@ cmake -S . -B build/ -G "Visual Studio 15 2017" ^
       -DLLVM_TARGETS_TO_BUILD="" ^
       -DCLANG_ENABLE_STATIC_ANALYZER=OFF ^
       -DCLANG_ENABLE_ARCMT=OFF
-cmake --build build/ --target clang-tidy --configRelWithDebInfo
-cmake --build build/ --target clang-format --configRelWithDebInfo
+cmake --build build/ --target clang-tidy --config RelWithDebInfo
+cmake --build build/ --target clang-format --config RelWithDebInfo
 ```
+
+### Setup
+
+- Ensure `clang-format.exe` and `clang-tidy.exe` are added to your path (restart your command prompt after making this change if necessary). These can either have been built locally (see [Optional](##Optional) section) or obtained from another source.
 
 ### Usage
 
