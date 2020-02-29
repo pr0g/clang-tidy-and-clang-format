@@ -25,8 +25,8 @@ cmake -S . -B build/ -G "Visual Studio 15 2017" ^
       -DLLVM_TARGETS_TO_BUILD="" ^
       -DCLANG_ENABLE_STATIC_ANALYZER=OFF ^
       -DCLANG_ENABLE_ARCMT=OFF
-cmake --build build/ --target clang-tidy --config RelWithDebInfo
-cmake --build build/ --target clang-format --config RelWithDebInfo
+cmake --build build/ --target clang-tidy --config Release
+cmake --build build/ --target clang-format --config Release
 ```
 
 ### Setup
