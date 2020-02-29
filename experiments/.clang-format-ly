@@ -1,0 +1,45 @@
+BasedOnStyle: Microsoft
+
+Language: Cpp
+Standard: c++17
+
+NamespaceIndentation: All
+PointerAlignment: Left
+BreakInheritanceList: BeforeComma
+SortIncludes: false
+SpaceBeforeInheritanceColon: true
+AlwaysBreakTemplateDeclarations: true
+SpaceAfterTemplateKeyword: false
+AccessModifierOffset: -4
+AlignAfterOpenBracket: AlwaysBreak
+ColumnLimit: 100
+SpaceBeforeCpp11BracedList: false
+Cpp11BracedListStyle: false
+BreakConstructorInitializers: BeforeComma
+ConstructorInitializerIndentWidth: 4
+ContinuationIndentWidth: 4
+IndentCaseLabels: false
+IndentWidth: 4
+AllowShortLambdasOnASingleLine: None
+AllowAllArgumentsOnNextLine: true
+AlignTrailingComments: false
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignEscapedNewlines: Right
+AllowAllParametersOfDeclarationOnNextLine: true
+BreakBeforeBraces: Custom
+BraceWrapping:
+    AfterStruct: true
+    #BeforeLambdaBody: true # not supported
+BreakBeforeTernaryOperators: true
+FixNamespaceComments: true
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1
+SpaceAfterLogicalNot: false
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeParens: ControlStatements
+SpaceBeforeRangeBasedForLoopColon: true
+SpacesInAngles: false
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: false
+UseTab: Never
