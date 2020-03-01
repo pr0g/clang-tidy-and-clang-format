@@ -5,7 +5,7 @@
 ### Setup
 
 - Get `clang-format.exe` and `clang-tidy.exe`
-  - These can either have been built locally (see [Optional](##Optional) section below), downloaded from the [Release](https://github.com/pr0g/clang-tidy-and-clang-format/releases/tag/initial) page on this repo, or obtained from another source.
+  - These can either have been built locally (see [Optional](###Optional) section below), downloaded from the [Release](https://github.com/pr0g/clang-tidy-and-clang-format/releases/tag/latest) page on this repo, or obtained from another source.
 - Ensure `clang-format.exe` and `clang-tidy.exe` are added to your path (restart your command prompt after making this change if necessary).
   - Alternatively you can modify your path for the current session by running:
     ```bash
