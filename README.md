@@ -11,7 +11,7 @@
     ```bash
     set PATH=%PATH%;<path/to/clang-format_and_clang-tidy>
     ```
-  - e.g. `set PATH=%PATH%;C:\clang-utils`
+  - e.g. `set PATH=%PATH%;C:\clang-utils` (where clang-utils is a folder you dropped `clang_tidy.exe` and `clang_format.exe`).
 
 ### Example Usage
 
