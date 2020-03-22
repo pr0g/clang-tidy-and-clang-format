@@ -42,46 +42,20 @@
 
 #### Instructions
 
-##### Latest
-
 ```bash
 cd ${SRC_ROOT} # root folder for llvm repo
 git clone --depth 1 https://github.com/llvm/llvm-project .
-mkdir build
-cmake -S llvm/ -B build\ -G "Visual Studio 16 2019" ^
-  -DCMAKE_GENERATOR_PLATFORM=x64 ^
-  -Thost=x64 ^
-  -DLLVM_INCLUDE_TESTS=OFF ^
-  -DLLVM_BUILD_TOOLS=OFF ^
-  -DLLVM_INCLUDE_UTILS=OFF ^
-  -DLLVM_TARGETS_TO_BUILD="" ^
-  -DCLANG_ENABLE_STATIC_ANALYZER=OFF ^
-  -DCLANG_ENABLE_ARCMT=OFF
+cmake -S llvm/ -B build/ -G "Visual Studio 16 2019"^
+  -DCMAKE_GENERATOR_PLATFORM=x64^
+  -Thost=x64^
+  -DLLVM_INCLUDE_TESTS=OFF^
+  -DLLVM_BUILD_TOOLS=OFF^
+  -DLLVM_INCLUDE_UTILS=OFF^
+  -DLLVM_TARGETS_TO_BUILD=""^
+  -DCLANG_ENABLE_STATIC_ANALYZER=OFF^
+  -DCLANG_ENABLE_ARCMT=OFF^
   -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra"
-cmake --build build\ --config Release -j4
-```
 
-##### Deprecated (llvm project has moved - see above)
-
-```bash
-# source - https://devblogs.microsoft.com/cppblog/exploring-clang-tooling-part-1-extending-clang-tidy/
-cd ${SRC_ROOT}
-git clone https://git.llvm.org/git/llvm.git
-cd llvm/tools
-git clone https://git.llvm.org/git/clang.git
-cd clang/tools
-git clone https://git.llvm.org/gitclang-tools-extra.git extra
-cd ../../..
-mkdir build
-cmake -S . -B build/ -G "Visual Studio 15 2017" ^
-      -DCMAKE_GENERATOR_PLATFORM=x64 ^
-      -Thost=x64 ^
-      -DLLVM_INCLUDE_TESTS=OFF ^
-      -DLLVM_BUILD_TOOLS=OFF ^
-      -DLLVM_INCLUDE_UTILS=OFF ^
-      -DLLVM_TARGETS_TO_BUILD="" ^
-      -DCLANG_ENABLE_STATIC_ANALYZER=OFF ^
-      -DCLANG_ENABLE_ARCMT=OFF
-cmake --build build/ --target clang-tidy --config Release
-cmake --build build/ --target clang-format --config Release
+cmake --build build/ --target clang-tidy --config Release -j4
+cmake --build build/ --target clang-format --config Release -j4
 ```
